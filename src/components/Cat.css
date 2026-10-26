@@ -1,0 +1,37 @@
+.garden-cat { overflow: visible; }
+.cat-breathe { transform-origin: 0 0; animation: cat-breathing 3.8s ease-in-out infinite; }
+.cat-tail { transform-origin: -44px -29px; animation: cat-tail-sway 3s ease-in-out infinite; }
+.cat-is-walk .cat-front-leg { transform-origin: 17px -22px; animation: cat-step .55s ease-in-out infinite alternate; }
+.cat-is-walk .cat-far-front-leg { animation-delay: -.55s; }
+.cat-is-walk .cat-near-rear-leg { transform-origin: -24px -22px; animation: cat-step .55s ease-in-out infinite alternate-reverse; }
+.cat-is-walk .cat-rear-leg { transform-origin: -30px -22px; animation: cat-step .55s ease-in-out infinite alternate; }
+.cat-is-sniff .cat-head { transform-origin: 28px -29px; animation: cat-sniff 1.3s ease-in-out infinite; }
+.cat-is-pet-head .cat-tail { animation: cat-tail-sway .7s ease-in-out infinite; }
+.cat-is-pet-head .cat-head { transform-origin: 28px -29px; animation: cat-purr 1.8s ease-in-out infinite; }
+.cat-is-pet-back .cat-tail { transform-origin: -43px -30px; animation: cat-upright-tail 1.4s ease-in-out infinite; }
+.cat-is-groom .cat-head { transform-origin: 28px -29px; animation: cat-groom 1s ease-in-out infinite; }
+.cat-is-paw .cat-tongue, .cat-is-groom .cat-tongue { animation: cat-lick .6s steps(2, end) infinite; }
+.cat-is-sleep .cat-breathe { animation-duration: 5s; }
+.cat-is-sleep .cat-tail { animation: none; }
+.cat-is-butterfly .cat-breathe { animation: cat-jump 2.4s ease-in-out infinite; }
+.cat-is-butterfly .cat-ground-shadow { animation: cat-jump-shadow 2.4s ease-in-out infinite; transform-origin: 0 2px; }
+.cat-is-stretch .cat-breathe { animation: cat-stretch 3s ease-in-out infinite; }
+.cat-touch-zone { cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; }
+.cat-touch-zone:focus-visible { stroke: #fff8e9; stroke-width: 2; stroke-dasharray: 4 4; }
+.cat-love-heart { animation: cat-heart 2s ease-out infinite; }
+.cat-sleep-symbol { animation: cat-sleep 3s ease-in-out infinite; }
+.cat-miniature .cat-breathe { animation: cat-breathing 4s ease-in-out infinite; }
+@keyframes cat-breathing { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(1.025); } }
+@keyframes cat-tail-sway { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(8deg); } }
+@keyframes cat-upright-tail { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(4deg); } }
+@keyframes cat-step { from { transform: rotate(-7deg); } to { transform: rotate(8deg); } }
+@keyframes cat-sniff { 0%, 100% { transform: translateY(0); } 40%, 60% { transform: translateY(2px); } 50% { transform: translateY(1px); } }
+@keyframes cat-purr { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+@keyframes cat-groom { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(9deg) translateY(3px); } }
+@keyframes cat-lick { from { opacity: 1; } to { opacity: 0; } }
+@keyframes cat-jump { 0%, 15%, 68%, 100% { transform: translateY(0); } 37% { transform: translateY(-38px) rotate(-9deg); } 50% { transform: translateY(-34px) rotate(-3deg); } }
+@keyframes cat-jump-shadow { 0%, 15%, 68%, 100% { transform: scaleX(1); opacity: .15; } 37%, 50% { transform: scaleX(.65); opacity: .07; } }
+@keyframes cat-stretch { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(1.035) scaleY(.96); } }
+@keyframes cat-heart { 0% { opacity: 0; transform: translateY(4px) scale(.95); } 25%, 65% { opacity: .9; } 100% { opacity: 0; transform: translateY(-12px); } }
+@keyframes cat-sleep { 0%, 100% { opacity: .35; transform: translateY(0); } 50% { opacity: .85; transform: translateY(-5px); } }
+@media (prefers-reduced-motion: reduce) { .garden-cat * { animation-duration: 12s !important; } .cat-is-walk .cat-front-leg, .cat-is-walk .cat-rear-leg, .cat-is-walk .cat-near-rear-leg { animation: none; } }
