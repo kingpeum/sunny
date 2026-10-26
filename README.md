@@ -38,7 +38,7 @@ npm run preview -- --port 3000
 
 1. 승인 후 소스 코드를 GitHub 저장소의 기본 브랜치에 올립니다.
 2. 저장소의 Settings → Pages → Build and deployment에서 Source를 GitHub Actions로 설정합니다. 계정·저장소 유형에 따라 GitHub Pages 사용 가능 여부를 확인합니다.
-3. Actions → Publish Little Garden → Run workflow를 실행합니다. 코드 업로드만으로는 이 워크플로가 실행되지 않습니다.
+3. Actions → Publish Little Garden → Run workflow를 실행하거나 `main`에 커밋을 업로드합니다. 공개 배포 승인 후 `main`의 변경 사항이 자동 배포되도록 구성했습니다.
 4. 배포 작업이 성공한 뒤 작업 결과의 실제 페이지 주소를 열어 화면과 상호작용을 확인합니다. 성공 전에는 접속 가능한 사이트가 생겼다고 판단하지 않습니다.
 
 이 워크플로는 `/sunny/` 하위 경로용으로 빌드합니다. 다른 저장소명이나 사용자 도메인을 사용하면 배포 경로도 맞춰야 합니다.
